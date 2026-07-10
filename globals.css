@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #ff6b00; /* vibrant sporty orange */
+  --secondary-color: #0f0f11; /* deep premium black */
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom premium aesthetic utilities */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.dark .glassmorphism {
+  background: rgba(24, 24, 27, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* LIGHT MODE STYLES */
+html:not(.dark) body,
+html:not(.dark) [class*="bg-[#070709]"] {
+  background-color: #f1f5f9 !important; /* slate-100 (slightly darker white) */
+  color: #0f172a !important; /* slate-900 */
+}
+
+/* Header and card containers */
+html:not(.dark) header,
+html:not(.dark) [class*="bg-[#0f0f11]"],
+html:not(.dark) .bg-zinc-900,
+html:not(.dark) .bg-zinc-905,
+html:not(.dark) .bg-zinc-950,
+html:not(.dark) [class*="bg-zinc-900/50"],
+html:not(.dark) [class*="bg-zinc-950/40"],
+html:not(.dark) [class*="bg-zinc-900/40"] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important; /* slate-200 */
+}
+
+/* Badges, sub-containers, and borders */
+html:not(.dark) .bg-zinc-800,
+html:not(.dark) .bg-zinc-700 {
+  background-color: #e2e8f0 !important; /* slate-200 */
+}
+
+/* Borders */
+html:not(.dark) .border-zinc-800,
+html:not(.dark) .border-zinc-900,
+html:not(.dark) .border-zinc-700,
+html:not(.dark) [class*="border-zinc-850/80"],
+html:not(.dark) [class*="border-zinc-800/80"] {
+  border-color: #e2e8f0 !important;
+}
+
+/* Text colors */
+html:not(.dark) .text-white,
+html:not(.dark) .text-zinc-100,
+html:not(.dark) .text-zinc-200 {
+  color: #0f172a !important; /* slate-900 */
+}
+
+html:not(.dark) .text-zinc-300,
+html:not(.dark) .text-zinc-400 {
+  color: #334155 !important; /* slate-700 */
+}
+
+html:not(.dark) .text-zinc-500 {
+  color: #475569 !important; /* slate-600 */
+}
+
+html:not(.dark) .text-zinc-650 {
+  color: #64748b !important; /* slate-50 */
+}
+
+/* Inputs, Textareas, Selects */
+html:not(.dark) input,
+html:not(.dark) select,
+html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important; /* slate-300 */
+  color: #0f172a !important;
+}
+
+html:not(.dark) input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Hover and active buttons */
+html:not(.dark) [class*="hover:bg-zinc-850"]:hover,
+html:not(.dark) [class*="hover:bg-zinc-800"]:hover,
+html:not(.dark) [class*="hover:bg-zinc-900"]:hover,
+html:not(.dark) [class*="hover:bg-zinc-950"]:hover,
+html:not(.dark) [class*="hover:bg-zinc-900/80"]:hover {
+  background-color: #f1f5f9 !important; /* slate-100 */
+}
+
+html:not(.dark) [class*="bg-zinc-950/30"],
+html:not(.dark) [class*="bg-zinc-900/30"] {
+  background-color: #f1f5f9 !important;
+}
+
+html:not(.dark) [class*="bg-zinc-950/60"],
+html:not(.dark) [class*="bg-zinc-900/60"] {
+  background-color: #e2e8f0 !important;
+}
+
+/* Charts grid and table headers */
+html:not(.dark) [class*="bg-zinc-950/80"] {
+  background-color: #ffffff !important;
+}
+
+/* Scrollbars in light mode */
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+/* Specific elements like active workspace sidebar buttons */
+html:not(.dark) [class*="bg-zinc-800/40"] {
+  background-color: #f1f5f9 !important;
+}
+
+/* Hover text overrides in light mode */
+html:not(.dark) [class*="hover:text-white"]:hover {
+  color: #0f172a !important;
+}
+
+/* Custom Neon Glow Styles for Premium Dark Mode */
+.dark .neon-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 107, 0, 0.03);
+  border-color: rgba(255, 107, 0, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .neon-card:hover {
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 107, 0, 0.15);
+  border-color: rgba(255, 107, 0, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+.dark input:focus, 
+.dark select:focus, 
+.dark textarea:focus {
+  box-shadow: 0 0 12px rgba(255, 107, 0, 0.25) !important;
+  border-color: #ff6b00 !important;
+}
